@@ -1,0 +1,536 @@
+*, ::before, ::after {
+    position: relative;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #252235;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+    color: white;
+    overflow-x: hidden;
+}
+
+.cool-overflow::-webkit-scrollbar {
+    width: 0.35em;
+}
+
+.cool-overflow::-webkit-scrollbar-track {
+    background: #26282d;
+    border-radius: 10em;
+}
+
+.cool-overflow::-webkit-scrollbar-thumb {
+    background: #696c72;
+    border: 0.1em solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+button, input {
+    font: inherit;
+    color: inherit;
+    line-height: 1;
+    background: unset;
+    border: unset;
+    outline: unset;
+    -webkit-appearance: unset;
+}
+
+input::placeholder {
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+strong {
+    font-size: 1.1em;
+}
+
+a {
+    color: #7a768c;
+    text-decoration: none;
+}
+
+a.ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+}
+
+.hidden {
+    display: none !important;
+}
+
+[hidden] {
+    visibility: hidden;
+}
+
+.marked {
+    color: #7449b4;
+}
+
+/* Colours */
+
+.green {
+    color: #89cc32;
+}
+
+.darkgray {
+    color: #3e4147;
+}
+
+.gray {
+    color: #686c75;
+}
+
+.white {
+    color: white;
+}
+
+/* Default Button*/
+
+.button {
+    padding: 0.5em 1em;
+    background: linear-gradient(to right, red, blue);
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.button--purple {
+    background: linear-gradient(to right, #a767fa, #864ff2);
+}
+
+.button--green {
+    background: linear-gradient(to right, #65ac77, #62966b);
+}
+
+.button--orange {
+    background: linear-gradient(to right, #d67862, #d66662);
+}
+
+.button--big {
+    padding: 0.85em 1.75em;
+}
+
+.button__text {
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button--big .button__text {
+    font-size: 0.8em;
+}
+
+/* Icons */
+
+[class *="icon"] {
+    display: block;
+    background: no-repeat center/contain;
+}
+
+.icon__person {
+    background-image: url("../img/icons/person.png");
+}
+
+.icon__dollars {
+    background-image: url("../img/icons/dollars.png");
+}
+
+/* Header */
+
+header {
+    display: grid;
+}
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.topbar-logo {
+    width: 15em;
+    height: 2.5em;
+}
+
+.topbar-menu {
+    display: flex;
+    margin: auto;
+}
+
+.topbar-menu__link {
+    margin-left: 2em;
+    font-weight: 600;
+}
+
+.topbar-menu__link:first-child {
+    margin: 0;
+}
+
+.topbar-menu__link--active, .topbar-menu__link:hover {
+    color: white;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 6.75em);
+}
+
+/* Page Part */
+
+.page-part {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.page-part--row {
+    display: flex;
+}
+
+/* Chat */
+
+.chat {
+    display: grid;
+    align-content: space-between;
+    width: 25em;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.chat__inner {
+    display: grid;
+    align-content: flex-start;
+    row-gap: 2em;
+    padding: 2em 1.5em;
+    overflow: auto;
+}
+
+.chat-message {
+    display: flex;
+}
+
+.chat-message-user {
+    display: flex;
+    margin-right: 0.25em;
+}
+
+.chat-message-user__avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    object-fit: cover;
+}
+
+.chat-message-column {
+    /* margin-top: 0.5em; */
+    margin-left: 0.5em;
+}
+
+.chat-message-user__nickname {
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.chat-message-user__message {
+    margin-top: 0.25em;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #9a94b4;
+    line-height: 1.25;
+}
+
+.chat-message__time {
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 1.5em;
+}
+
+.chat-bottom {
+    display: grid;
+    align-content: inherit;
+    padding: 1em;
+    box-shadow: 0 -1em 1em -1em rgba(255, 255, 255, 0.25);
+}
+
+.chat-bottom__message {
+    color: #9a94b4;
+}
+
+.chat-bottom__rest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
+    font-size: 0.85em;
+}
+
+.chat-bottom__send {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-bottom__users {
+    display: grid;
+    justify-items: center;
+}
+
+.chat-bottom__users--icon {
+    width: 1.35em;
+    height: 1.35em;
+}
+
+.chat-bottom__users--count {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.85em;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* Game */
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+}
+
+.game-crash {
+    display: grid;
+    align-content: flex-start;
+    font-size: 1.1em;
+}
+
+.game-crash__canvas {
+    width: 25em;
+    height: 13em;
+    background: rgba(255, 255, 255, 0.05);
+    /* border: 0.5em solid rgba(255, 255, 255, 0.05); */
+    border-radius: 0.5em;
+}
+
+.game-crash__hashes {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.game-crash__hash {
+    padding: 0.25em 1em;
+    margin-left: 0.5em;
+    background: transparent;
+    border: 0.125em solid #a767fa;
+    border-radius: 0.5em;
+    font-size: 0.75em;
+    cursor: pointer;
+    transition: .125s background-color;
+}
+
+.game-crash__hash:first-child {
+    margin: 0;
+}
+
+.game-crash__hash:hover {
+    background: #a767fa;
+}
+
+.game-crash__details {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.game-crash-detail {
+    display: flex;
+    align-items: inherit;
+    margin-left: 1em;
+    font-weight: 500;
+}
+
+.game-crash-detail:first-child {
+    margin: 0;
+}
+
+.game-crash-detail__icon {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+}
+
+.game-details {
+    display: grid;
+    align-content: flex-start;
+    justify-items: baseline;
+    row-gap: 1em;
+    width: 20em;
+    font-size: 1.1em;
+}
+
+.game-details__balance {
+    display: flex;
+    align-items: center;
+}
+
+.game-details__balance>h2 {
+    margin-right: 0.75em;
+}
+
+.game-details__balance--icon {
+    background-image: url("assets/img/icons/dollars.png");
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 0.5em;
+}
+
+.game-details__balance--text {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.game-details-buttons {
+    display: flex;
+    margin-top: -0.5em;
+}
+
+.game-details-buttons>button {
+    margin-left: 1em;
+}
+
+.game-details-buttons>button:first-child {
+    margin: 0;
+}
+
+.game-values {
+    display: flex;
+}
+
+.game-values__column {
+    display: grid;
+    row-gap: 0.25em;
+    margin-left: 1em;
+}
+
+.game-values__column:first-child {
+    margin: 0;
+}
+
+.game-values__column--0 {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #9a94b4;
+}
+
+.game-values__column--1 {
+    width: 5em;
+    padding: 0.35em 1em;
+    background: rgba(255, 255, 255, 0.075);
+    border-radius: 0.25em;
+    text-align: center;
+}
+
+/* Game Ads */
+
+.game-ads {
+    display: grid;
+    align-content: flex-start;
+    row-gap: 1em;
+}
+
+.game-ads__ad {
+    display: inherit;
+    transition: 0.25s background-color;
+}
+
+.game-ads__ad:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.game-ads__ad--image {
+    width: 7.5em;
+    height: 7.5em;
+    border-radius: 0.5em;
+    z-index: -1;
+}
+
+/* Plays */
+
+.plays {
+    display: inline-grid;
+    justify-items: baseline;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 1em;
+    column-gap: 3.25em;
+    padding: 3em;
+    padding-top: 0;
+}
+
+.plays-game {
+    display: flex;
+    align-items: center;
+    padding: 0.85em 1.5em;
+    border: 0.2em solid #7a768c;
+    border-radius: 0.5em;
+    box-shadow: inset 0 0 0.75em 0 #7a768c;
+    cursor: pointer;
+    transition: .25s box-shadow;
+}
+
+.plays-game:hover {
+    box-shadow: inset 0 0 1.25em 0.1em #7a768c;
+}
+
+.plays-game__image {
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+    margin-right: 2em;
+}
+
+.plays-game__amount {
+    display: flex;
+}
+
+.plays-game__amount--icon {
+    background-image: url("../img/icons/dollars.png");
+    margin-right: 0.5em;
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.plays-game__hash {
+    padding: 0.25em 1em;
+    margin: 0 1.5em;
+    background: transparent;
+    border: 0.125em solid #a767fa;
+    border-radius: 0.5em;
+    font-size: 0.75em;
+    cursor: pointer;
+    transition: .125s background-color;
+}
+
+.plays-game__hash:hover {
+    background: #a767fa;
+}
+
+.plays-game__state {
+    width: 4em;
+    height: 5em;
+    margin: -1em 2em;
+    margin-right: 0;
+}
