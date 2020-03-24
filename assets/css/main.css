@@ -99,21 +99,21 @@ a.ghost {
 
 .button {
     padding: 0.5em 1em;
-    background: linear-gradient(to right, red, blue);
+    background: linear-gradient(135deg, red, blue);
     border-radius: 0.25em;
     cursor: pointer;
 }
 
 .button--purple {
-    background: linear-gradient(to right, #a767fa, #864ff2);
+    background: linear-gradient(135deg, #a767fa, #864ff2);
 }
 
 .button--green {
-    background: linear-gradient(to right, #65ac77, #62966b);
+    background: linear-gradient(135deg, #65ac77, #62966b);
 }
 
 .button--orange {
-    background: linear-gradient(to right, #d67862, #d66662);
+    background: linear-gradient(135deg, #d67862, #d66662);
 }
 
 .button--big {
@@ -156,7 +156,7 @@ header {
 .topbar {
     display: flex;
     align-items: center;
-    padding: 2em;
+    padding: 1em;
     background: rgba(0, 0, 0, 0.25);
 }
 
@@ -188,7 +188,7 @@ header {
 main {
     display: flex;
     justify-content: space-between;
-    height: calc(100vh - 6.75em);
+    height: calc(100vh - 4.75em);
 }
 
 /* Page Part */
@@ -263,12 +263,15 @@ main {
 
 .chat-bottom {
     display: grid;
-    align-content: inherit;
     padding: 1em;
-    box-shadow: 0 -1em 1em -1em rgba(255, 255, 255, 0.25);
+    border-top: 0.125em solid #3d3747;
 }
 
 .chat-bottom__message {
+    width: 100%;
+    padding: 0.5em 1.25em;
+    background: rgba(255, 255, 255, 0.075);
+    border-radius: 10em;
     color: #9a94b4;
 }
 
@@ -281,8 +284,9 @@ main {
 }
 
 .chat-bottom__send {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /* justify-items: center; */
+    row-gap: 1em;
 }
 
 .chat-bottom__users {
@@ -307,14 +311,13 @@ main {
 
 .game {
     display: flex;
-    justify-content: space-between;
-    padding: 3em;
+    padding: 2em;
 }
 
 .game-crash {
     display: grid;
     align-content: flex-start;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
 }
 
 .game-crash__canvas {
@@ -375,9 +378,9 @@ main {
 .game-details {
     display: grid;
     align-content: flex-start;
-    justify-items: baseline;
     row-gap: 1em;
-    width: 20em;
+    margin-left: 2em;
+    margin-right: auto;
     font-size: 1.1em;
 }
 
@@ -391,7 +394,7 @@ main {
 }
 
 .game-details__balance--icon {
-    background-image: url("assets/img/icons/dollars.png");
+    background-image: url("../img/icons/dollars.png");
     width: 1.25em;
     height: 1.25em;
     margin-right: 0.5em;
@@ -443,12 +446,18 @@ main {
     text-align: center;
 }
 
+.game-details>.button {
+    width: 13.75em;
+}
+
 /* Game Ads */
 
 .game-ads {
     display: grid;
     align-content: flex-start;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 1em;
+    column-gap: 1em;
 }
 
 .game-ads__ad {
@@ -472,12 +481,13 @@ main {
 .plays {
     display: inline-grid;
     justify-items: baseline;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     row-gap: 1em;
     column-gap: 3.25em;
-    padding: 3em;
+    padding: 2em;
     padding-top: 0;
+    font-size: 0.75em;
 }
 
 .plays-game {
