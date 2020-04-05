@@ -6,7 +6,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: #252235;
+    background: #201c2d;
     font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
     line-height: 1;
@@ -105,15 +105,15 @@ a.ghost {
 }
 
 .button--purple {
-    background: linear-gradient(135deg, #a767fa, #864ff2);
+    background: linear-gradient(135deg, #b45dfa, #8f47f3);
 }
 
 .button--green {
-    background: linear-gradient(135deg, #65ac77, #62966b);
+    background: linear-gradient(135deg, #25a66d, #378d60);
 }
 
 .button--orange {
-    background: linear-gradient(135deg, #d67862, #d66662);
+    background: linear-gradient(135deg, #ea7059, #ed5f5d);
 }
 
 .button--big {
