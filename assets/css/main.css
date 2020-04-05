@@ -209,6 +209,7 @@ main {
 .chat {
     display: grid;
     align-content: space-between;
+    flex-shrink: 0;
     width: 20em;
     height: 100%;
     background: #1b1927;
@@ -392,6 +393,7 @@ main {
 }
 
 .game-details__balance>h2 {
+    top: -0.1em;
     margin-right: 0.75em;
 }
 
@@ -589,4 +591,60 @@ main {
     height: 5em;
     margin: -1em 2em;
     margin-right: 0;
+}
+
+/* FAQ */
+
+.faq {
+    display: grid;
+    row-gap: 0.5em;
+    padding: 2em;
+}
+
+.faq__clause {
+    display: grid;
+}
+
+.faq__summary {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.175em;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq__content {
+    word-break: break-all;
+    line-height: 1.25;
+    height: 0;
+    overflow: hidden;
+    transition: 0.35s ease height;
+}
+
+.faq__content--inner {
+    border-left: 0.125em solid #ffc600;
+    padding: 0.5em 1em;
+    margin: 1em 2em;
+}
+
+.faq__summary::before {
+    /* content: ''; */
+    display: block;
+    width: 0.75em;
+    height: 1em;
+    margin-right: 1em;
+    background: url("../img/icons/plus.png") no-repeat center/contain;
+}
+
+.faq__clause--deployed .faq__summary::before {
+    background-image: url("../img/icons/minus.png");
+}
+
+.faq__clause--deployed .faq__content {
+    height: var(--height);
 }
