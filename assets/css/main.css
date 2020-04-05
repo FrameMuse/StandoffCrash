@@ -496,6 +496,7 @@ main {
 .plays-game {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0.85em 1.5em;
     border: 0.2em solid #7a768c;
     border-radius: 0.5em;
@@ -530,6 +531,10 @@ main {
     background-image: url("../img/icons/arrow_green.png");
 }
 
+.plays-game--0 .plays-game__hash {
+    border-color: #42f1ac;
+}
+
 .plays-game--1 {
     border-color: #da273c;
     box-shadow: inset 0 0 0.75em 0 #da273c;
@@ -545,6 +550,10 @@ main {
 
 .plays-game--1 .plays-game__state {
     background-image: url("../img/icons/arrow_red.png");
+}
+
+.plays-game--1 .plays-game__hash {
+    border-color: #da273c;
 }
 
 .plays-game--2 {
