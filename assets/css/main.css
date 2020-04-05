@@ -603,7 +603,7 @@ main {
     height: 5em;
     margin: -1em 2em;
     margin-right: 0;
-    background-image: url("../img/icons/arrow_green.png");
+    background: no-repeat center/cover;
 }
 
 /* FAQ */
