@@ -602,10 +602,6 @@ main {
     transition: .125s background-color;
 }
 
-.plays-game__hash:hover {
-    background: #a767fa;
-}
-
 .plays-game__state {
     width: 4em;
     height: 5em;
