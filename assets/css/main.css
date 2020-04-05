@@ -609,7 +609,7 @@ main {
     display: flex;
     align-items: center;
     padding: 1.5em 1.5em;
-    background: rgba(255, 255, 255, 0.05);
+    background: #181521;
     border-radius: 0.175em;
     font-size: 0.85em;
     font-weight: 600;
@@ -628,7 +628,7 @@ main {
 
 .faq__content--inner {
     padding: 1em;
-    background: #666;
+    background: #1b1927;
     font-size: 0.85em;
 }
 
