@@ -1,7 +1,7 @@
 // FAQ
 var faq_content = $(".faq__content");
 faq_content.each(function () {
-    $(this).css({ "--height": $(this).find(">").outerHeight() + (2).toPx(faq_content) });
+    $(this).css({ "--height": $(this).find(">").outerHeight() });
 });
 
 $(document).on("click", ".faq__summary", function () {

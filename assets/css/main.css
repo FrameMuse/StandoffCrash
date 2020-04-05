@@ -627,9 +627,9 @@ main {
 }
 
 .faq__content--inner {
-    border-left: 0.125em solid #ffc600;
-    padding: 0.5em 1em;
-    margin: 1em 2em;
+    padding: 1em;
+    background: #666;
+    font-size: 0.85em;
 }
 
 .faq__summary::before {
