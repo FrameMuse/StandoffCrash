@@ -98,7 +98,8 @@ a.ghost {
 /* Default Button*/
 
 .button {
-    padding: 0.5em 1em;
+    display: flex;
+    padding: 0.65em 1em;
     background: linear-gradient(135deg, red, blue);
     border-radius: 0.25em;
     cursor: pointer;
@@ -124,6 +125,7 @@ a.ghost {
     font-size: 0.7em;
     font-weight: 700;
     text-transform: uppercase;
+    margin: auto;
 }
 
 .button--big .button__text {
@@ -394,7 +396,7 @@ main {
 }
 
 .game-details__balance--icon {
-    background-image: url("../img/icons/dollars.png");
+    background-image: url("../img/icons/coin_green.png");
     width: 1.25em;
     height: 1.25em;
     margin-right: 0.5em;
@@ -503,6 +505,50 @@ main {
 
 .plays-game:hover {
     box-shadow: inset 0 0 1.25em 0.1em #7a768c;
+}
+
+.plays__column {
+    display: grid;
+    row-gap: 1em;
+}
+
+.plays-game--0 {
+    border-color: #42f1ac;
+    box-shadow: inset 0 0 0.75em 0 #42f1ac;
+}
+
+.plays-game--0:hover {
+    box-shadow: inset 0 0 1.25em 0.1em #42f1ac;
+}
+
+.plays-game--0 .plays-game__amount--icon {
+    background-image: url("../img/icons/coin_green.png");
+}
+
+.plays-game--1 {
+    border-color: #ab3a4e;
+    box-shadow: inset 0 0 0.75em 0 #ab3a4e;
+}
+
+.plays-game--1:hover {
+    box-shadow: inset 0 0 1.25em 0.1em #ab3a4e;
+}
+
+.plays-game--1 .plays-game__amount--icon {
+    background-image: url("../img/icons/coin_red.png");
+}
+
+.plays-game--2 {
+    border-color: #9964ce;
+    box-shadow: inset 0 0 0.75em 0 #9964ce;
+}
+
+.plays-game--2:hover {
+    box-shadow: inset 0 0 1.25em 0.1em #9964ce;
+}
+
+.plays-game--2 .plays-game__amount--icon {
+    background-image: url("../img/icons/coin_purple.png");
 }
 
 .plays-game__image {
