@@ -513,8 +513,8 @@ main {
 }
 
 .plays-game--0 {
-    border-color: #42f1ac;
-    box-shadow: inset 0 0 0.75em 0 #42f1ac;
+    border-color: #41f2aa;
+    box-shadow: inset 0 0 0.8em 0 #41f2aa;
 }
 
 .plays-game--0:hover {
@@ -526,12 +526,12 @@ main {
 }
 
 .plays-game--1 {
-    border-color: #ab3a4e;
-    box-shadow: inset 0 0 0.75em 0 #ab3a4e;
+    border-color: #da273c;
+    box-shadow: inset 0 0 0.75em 0 #da273c;
 }
 
 .plays-game--1:hover {
-    box-shadow: inset 0 0 1.25em 0.1em #ab3a4e;
+    box-shadow: inset 0 0 1.25em 0.1em #da273c;
 }
 
 .plays-game--1 .plays-game__amount--icon {
@@ -539,12 +539,12 @@ main {
 }
 
 .plays-game--2 {
-    border-color: #9964ce;
-    box-shadow: inset 0 0 0.75em 0 #9964ce;
+    border-color: #9666c9;
+    box-shadow: inset 0 0 0.75em 0 #9666c9;
 }
 
 .plays-game--2:hover {
-    box-shadow: inset 0 0 1.25em 0.1em #9964ce;
+    box-shadow: inset 0 0 1.25em 0.1em #9666c9;
 }
 
 .plays-game--2 .plays-game__amount--icon {
